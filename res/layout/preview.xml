@@ -1,0 +1,61 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:id="@+id/layout">
+	<FrameLayout android:id="@+id/preview"
+		android:layout_weight="1" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+	</FrameLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="85dip"
+	android:layout_height="fill_parent" android:id="@+id/layout">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent" 
+	android:layout_height="67dip" android:id="@+id/layoutbutton" android:paddingBottom="20dip">
+		
+	<Button android:id="@+id/flash" android:layout_width="91dip" android:layout_height="50dip"
+					android:text="Light"  />
+	
+</LinearLayout>	
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent" 
+	android:layout_height="67dip" android:id="@+id/layoutbutton" android:paddingBottom="20dip">
+	<Button android:id="@+id/focus" android:layout_width="91dip" android:layout_height="50dip"
+					android:text="Focus"  />
+</LinearLayout>	
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent" 
+	android:layout_height="67dip" android:id="@+id/layoutbutton" android:paddingBottom="20dip">
+		
+	<Button android:id="@+id/freeze" android:layout_width="91dip" android:layout_height="50dip"
+					android:text="Freeze"  />
+					
+</LinearLayout>	
+	<!--  
+	 <TextView android:id="@+id/zoom"
+       	android:layout_width="fill_parent" android:layout_height="25sp"
+					android:layout_marginTop="3dip" 
+					android:layout_marginLeft="10dip" android:layout_marginRight="10dip"
+					android:singleLine="true" android:textSize="12dip" android:text="Zoom:0.0"
+		android:visibility="visible"/>
+	-->
+
+	<SeekBar android:id="@+id/seek"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:max="11"
+        android:progress="0"  android:hapticFeedbackEnabled="true"
+        android:layout_marginTop="0dip" android:visibility="visible" 
+		android:layout_marginLeft="4dip" android:layout_marginRight="4dip"/>
+	
+	
+	
+			<Button android:id="@+id/close"
+					android:layout_width="91dip" android:layout_height="50dip"
+					android:text="Quit" 
+					android:layout_marginTop="15dip"  android:layout_gravity="bottom"/>
+
+			
+</LinearLayout>
+</LinearLayout>

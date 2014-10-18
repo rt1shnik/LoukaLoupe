@@ -1,0 +1,16 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView android:id="@+id/titleWhatsNew"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_marginLeft="10dip" android:layout_marginRight="20dip"
+			android:text="Thank you for your help. I have been reading and for some reason the manufactures are not returning correct codes when working with the camera. This makes the application think it can not zoom. I will disregard the error and your app should work, but if you send me this email with the code i should be able to debug it. \nThis problem is solved in FROYO 2.2 but I would like this to work with 2.0 and above." android:gravity="left"
+			android:textAppearance="?android:attr/textAppearanceMedium" 
+			android:textStyle="bold"
+			/>
+		
+	</LinearLayout>
+
+</ScrollView>
