@@ -55,9 +55,7 @@
 package com.android.loukaloup;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.hardware.Camera;
@@ -65,13 +63,8 @@ import android.hardware.Camera.Parameters;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -380,92 +373,6 @@ public class MagnifierActivity extends Activity implements
 
 	}
 
-	protected void showWhatsNewDialog() {
-		LayoutInflater factory = LayoutInflater.from(this);
-		final View textEntryView = factory.inflate(
-				R.layout.whats_new, null);
-		new AlertDialog.Builder(this)
-				.setIcon(R.drawable.icon)
-				.setTitle("What's New")
-				.setView(textEntryView)
-				.setPositiveButton("Done",
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface d, int which) {
-
-							}
-						})
-				.setNegativeButton("Email Me",
-						new DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog,
-									int which) {
-								AlertDialog d = (AlertDialog) dialog;
-								Toast.makeText(
-										d.getContext().getApplicationContext(),
-										"Email application starting...",
-										Toast.LENGTH_SHORT).show();
-								Log.d(tag, "Sending email ");
-								Intent emailIntent = new Intent(
-										Intent.ACTION_SEND);
-								emailIntent.putExtra(Intent.EXTRA_SUBJECT,
-										"Enhancement/Bug Report for Magnifying Glass v"
-												+ VERSION);
-								emailIntent
-										.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-								emailIntent.putExtra(Intent.EXTRA_TEXT, "");
-								String[] tos = new String[] { "d.dry.parry@gmail.com" };
-								emailIntent.putExtra(Intent.EXTRA_EMAIL, tos);
-								emailIntent.setType("message/rfc822");
-								try {
-									d.getContext().getApplicationContext()
-											.startActivity(emailIntent);
-									// System.exit(0);
-								} catch (Exception e) {
-									Log.e(tag,
-											"Error starting email application ",
-											e);
-								}
-							}
-						}).show();
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-		menu.add(Menu.FIRST, Menu.FIRST, Menu.FIRST, "Email debug Parameters");
-		MenuItem mi = menu.getItem(0);
-		Intent emailIntent = new Intent(Intent.ACTION_SEND);
-		emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Camera Properties");
-		emailIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		StringBuffer buff = new StringBuffer("JDK version:");
-		buff.append(android.os.Build.VERSION.SDK);
-		buff.append("\n\n");
-		buff.append(getProperties());
-		buff.append("\n");
-		buff.append(this.information.toString());
-		emailIntent.putExtra(Intent.EXTRA_TEXT, buff.toString());
-		String[] tos = new String[] { "d.dry.parry@gmail.com" };
-		emailIntent.putExtra(Intent.EXTRA_EMAIL, tos);
-		emailIntent.setType("message/rfc822");
-		mi.setIntent(emailIntent);
-
-		menu.add(Menu.FIRST, Menu.FIRST, 2, "What's New");
-		MenuItem m3 = menu.getItem(1);
-		m3.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-			public boolean onMenuItemClick(MenuItem item) {
-				showWhatsNewDialog();
-				return true;
-			}
-		});
-		menu.add(Menu.FIRST, Menu.FIRST, 3, "Instruction");
-		MenuItem m4 = menu.getItem(2);
-		m4.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-			public boolean onMenuItemClick(MenuItem item) {
-				showInstruction();
-				return true;
-			}
-		});
-		return true;
-	}
 
 	public String getProperties() {
 		if (preview != null) {
@@ -582,28 +489,6 @@ public class MagnifierActivity extends Activity implements
 		// This is the standard setting to turn the flash off that all devices
 		// should honor.
 		parameters.set("flash-mode", "off");
-	}
-
-	private void showInstruction() {
-		LayoutInflater factory = LayoutInflater.from(this);
-		View textEntryView = factory.inflate(
-				R.layout.instruction, null);
-
-		WebView webView = (WebView) textEntryView.findViewById(R.id.webView);
-		webView.setBackgroundColor(R.color.popup_grey);
-		webView.loadData(getData(), "text/html", "utf-8");
-
-		AlertDialog dialog = new AlertDialog.Builder(this)
-				.setView(textEntryView)
-				.setNegativeButton("Done",
-						new android.content.DialogInterface.OnClickListener() {
-							public void onClick(DialogInterface dialog,
-									int which) {
-								dialog.dismiss();
-
-							}
-						}).create();
-		dialog.show();
 	}
 
 	public SystemInformation getInformation() {
