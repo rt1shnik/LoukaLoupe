@@ -7,29 +7,29 @@
 		android:layout_height="fill_parent">
 	</FrameLayout>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="85dip"
+	android:orientation="vertical" android:layout_width="100dip"
 	android:layout_height="fill_parent" android:id="@+id/layout">
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="fill_parent" 
 	android:layout_height="67dip" android:id="@+id/layoutbutton" android:paddingBottom="20dip">
 		
-	<Button android:id="@+id/flash" android:layout_width="91dip" android:layout_height="50dip"
-					android:text="Light"  />
+	<Button android:id="@+id/flash" android:layout_width="100dip" android:layout_height="50dip"
+					android:text="Lumière"  />
 	
 </LinearLayout>	
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="fill_parent" 
 	android:layout_height="67dip" android:id="@+id/layoutbutton" android:paddingBottom="20dip">
-	<Button android:id="@+id/focus" android:layout_width="91dip" android:layout_height="50dip"
+	<Button android:id="@+id/focus" android:layout_width="100dip" android:layout_height="50dip"
 					android:text="Focus"  />
 </LinearLayout>	
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical" android:layout_width="fill_parent" 
 	android:layout_height="67dip" android:id="@+id/layoutbutton" android:paddingBottom="20dip">
 		
-	<Button android:id="@+id/freeze" android:layout_width="91dip" android:layout_height="50dip"
-					android:text="Freeze"  />
+	<Button android:id="@+id/freeze" android:layout_width="100dip" android:layout_height="50dip"
+					android:text="Bloquer"  />
 					
 </LinearLayout>	
 	<!--  
@@ -52,8 +52,8 @@
 	
 	
 			<Button android:id="@+id/close"
-					android:layout_width="91dip" android:layout_height="50dip"
-					android:text="Quit" 
+					android:layout_width="100dip" android:layout_height="50dip"
+					android:text="Quitter" 
 					android:layout_marginTop="15dip"  android:layout_gravity="bottom"/>
 
 			
