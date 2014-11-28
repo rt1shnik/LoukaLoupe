@@ -345,6 +345,14 @@ public class MagnifierActivity extends Activity implements
 		} catch (Exception e) {
 			Log.e(tag, "Error doing camera pre-load", e);
 		}
+		
+		showSosButton();
+	}
+
+	private void showSosButton() {
+		Intent intent = new Intent();
+        intent.setAction("com.louka.launcher.sosbutton.show");
+        sendBroadcast(intent);
 	}
 
 	@Override
@@ -365,6 +373,14 @@ public class MagnifierActivity extends Activity implements
 			showCameraOnErrorMessage(this, "An errr occured resuming \n"
 					+ this.information + "\n" + e);
 		}
+		
+		hideSosButton();
+	}
+
+	private void hideSosButton() {
+		Intent intent = new Intent();
+        intent.setAction("com.louka.launcher.sosbutton.hide");
+        sendBroadcast(intent);
 	}
 
 	@Override
