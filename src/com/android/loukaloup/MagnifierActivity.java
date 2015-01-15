@@ -137,7 +137,7 @@ public class MagnifierActivity extends Activity implements
 					if (lightOn) {
 						light.setText("Off");
 					} else {
-						light.setText("Light");
+						light.setText(R.string.flash);
 					}
 				}
 			}
@@ -182,7 +182,7 @@ public class MagnifierActivity extends Activity implements
 					if (freezed) {
 						fb.setText("Off");
 					} else {
-						fb.setText("Freeze");
+						fb.setText(R.string.freeze);
 					}
 				} catch (Exception e) {
 					Log.e(tag, "Error on finishing task", e);
@@ -267,7 +267,7 @@ public class MagnifierActivity extends Activity implements
 		this.focused = focused;
 		Button focusClick = (Button) findViewById(R.id.focus);
 		if (isFocused()) {
-			focusClick.setText("Focus");
+			focusClick.setText(R.string.focus);
 		} else {
 			focusClick.setText("Wait!");
 		}

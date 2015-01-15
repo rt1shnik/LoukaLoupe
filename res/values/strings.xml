@@ -3,5 +3,8 @@
     
     <string name="app_name">Louka Loupe</string>
     <string name="flash">Lumière</string>
+    <string name="freeze">Bloquer</string>
+    <string name="focus">Focus</string>
+    <string name="close">Quitter</string>
     
 </resources>
