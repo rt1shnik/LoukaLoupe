@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="app_name">Louka Loupe</string>
+    <string name="app_name">Sidonie Loupe</string>
     <string name="flash">Lumière</string>
     <string name="freeze">Bloquer</string>
     <string name="focus">Focus</string>
