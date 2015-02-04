@@ -14,7 +14,7 @@
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/layout"
-        android:layout_width="100dip"
+        android:layout_width="120dip"
         android:layout_height="fill_parent"
         android:orientation="vertical" >
 
@@ -28,7 +28,7 @@
 
             <Button
                 android:id="@+id/flash"
-                android:layout_width="100dip"
+                android:layout_width="120dip"
                 android:layout_height="50dip"
                 android:text="@string/flash" />
         </LinearLayout>
@@ -43,7 +43,7 @@
 
             <Button
                 android:id="@+id/focus"
-                android:layout_width="100dip"
+                android:layout_width="120dip"
                 android:layout_height="50dip"
                 android:text="@string/focus" />
         </LinearLayout>
@@ -58,7 +58,7 @@
 
             <Button
                 android:id="@+id/freeze"
-                android:layout_width="100dip"
+                android:layout_width="120dip"
                 android:layout_height="50dip"
                 android:text="@string/freeze" />
         </LinearLayout>
@@ -77,7 +77,7 @@
 
         <Button
             android:id="@+id/close"
-            android:layout_width="100dip"
+            android:layout_width="120dip"
             android:layout_height="50dip"
             android:layout_gravity="bottom"
             android:layout_marginTop="15dip"

@@ -6,5 +6,6 @@
     <string name="freeze">Bloquer</string>
     <string name="focus">Focus</string>
     <string name="close">Quitter</string>
+    <string name="unfreeze">Débloquer</string>
     
 </resources>

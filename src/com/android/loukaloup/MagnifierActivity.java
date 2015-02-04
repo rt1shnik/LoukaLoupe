@@ -180,7 +180,7 @@ public class MagnifierActivity extends Activity implements
 						}
 					}
 					if (freezed) {
-						fb.setText("Off");
+						fb.setText(R.string.unfreeze);
 					} else {
 						fb.setText(R.string.freeze);
 					}
