@@ -7,5 +7,6 @@
     <string name="focus">Focus</string>
     <string name="close">Quitter</string>
     <string name="unfreeze">Débloquer</string>
+    <string name="wait">Attendre!</string>
     
 </resources>

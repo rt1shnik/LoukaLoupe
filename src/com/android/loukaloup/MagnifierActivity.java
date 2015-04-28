@@ -269,7 +269,7 @@ public class MagnifierActivity extends Activity implements
 		if (isFocused()) {
 			focusClick.setText(R.string.focus);
 		} else {
-			focusClick.setText("Wait!");
+			focusClick.setText(R.string.wait);
 		}
 	}
 
