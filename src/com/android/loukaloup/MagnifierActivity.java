@@ -87,7 +87,8 @@ public class MagnifierActivity extends Activity implements
 	private boolean freezed = false;
 	private SystemInformation information = null;
 	private ZoomButtonsController zoomControll;
-	private int[] zoomLevels = { 0, 1, 2, 4, 6, 8, 10, 12, 13, 16, 30, 40 };
+	public static int[] zoomLevels = { 0, 1, 2, 4, 6, 8, 10, 12, 13, 16, 30, 40 };
+	private SeekBar mSeekBar;
 
 	@Override
 	public void onConfigurationChanged(Configuration newConfig) {
@@ -142,8 +143,8 @@ public class MagnifierActivity extends Activity implements
 				}
 			}
 		});
-		SeekBar seekBar = (SeekBar) findViewById(R.id.seek);
-		seekBar.setOnSeekBarChangeListener(this);
+		mSeekBar = (SeekBar) findViewById(R.id.seek);
+		mSeekBar.setOnSeekBarChangeListener(this);
 		focusCallback = new AutoFocusCallBackImpl(this);
 		Button closeClick = (Button) findViewById(R.id.close);
 		closeClick.setOnClickListener(new OnClickListener() {
@@ -414,6 +415,10 @@ public class MagnifierActivity extends Activity implements
 				Log.e(tag, "error", e);
 			}
 		}
+	}
+	
+	public void setZoomInSeekBar(int progress){
+		mSeekBar.setProgress(progress);
 	}
 
 	public void onStartTrackingTouch(SeekBar seekBar) {

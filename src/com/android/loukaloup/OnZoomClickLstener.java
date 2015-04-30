@@ -80,10 +80,12 @@ public class OnZoomClickLstener implements OnZoomListener {
 					this.activity.getPreview().getZoomer().zoom();
 					this.activity.getZoomControll().setZoomInEnabled(false);
 					this.activity.getZoomControll().setZoomOutEnabled(true);
+					this.activity.setZoomInSeekBar(MagnifierActivity.zoomLevels.length - 1);
 				} else {
 					this.activity.getPreview().getZoomer().zoomCamera(0);
 					this.activity.getZoomControll().setZoomInEnabled(true);
 					this.activity.getZoomControll().setZoomOutEnabled(false);
+					this.activity.setZoomInSeekBar(0);
 				}
 			}
 			//this.activity.focus();
